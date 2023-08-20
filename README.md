@@ -13,3 +13,20 @@ For data output we are using the ip of each instance in html page and different 
 
 ### SOLUTION-------------------------------
 
+### First of all we have to create an instance using ubuntu AMI.
+<img src="">
+
+### Launch the instance and connect it through ssh on terminal.
+```
+ssh -i "your key" ubuntu@(your publicip).compute-1.amazonaws.com
+```
+<img src="">
+
+### After connecting the instance, type -
+```
+sudo apt update
+```
+<img src="">
+
+### In cmd in terminal.
+### Now we have to install some required services to move further in our process.
