@@ -8,7 +8,7 @@ For data output we are using the ip of each instance in html page and different 
 
 ### OVER-VIEW DIAGRAM
 
-<img src="https://github.com/kitty6xt5/PROJECT2/blob/main/images/ec2loadbalancer.jpg">
+<img src="https://github.com/kitty6xt5/PROJECT2/blob/main/images/custom.jpg">
 
 
 ### SOLUTION-------------------------------
