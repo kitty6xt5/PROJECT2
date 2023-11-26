@@ -82,7 +82,9 @@ Now scroll down and you will see an ```Advanced details``` option click on it an
 #!/bin/bash
 apt update
 apt install nginx -y 
-systemctl start
+systemctl start nginx
+echo "<h1>heya its $(hostname)"<h1/> > /var/www/html/index.html
+
 ```
 
 ![newconf-script](https://github.com/kitty6xt5/PROJECT2/assets/141032592/1c467603-a8bd-4cfe-9d5c-2a61930d0df2)
