@@ -8,9 +8,8 @@ For data output we are using the ip of each instance in html page and different 
 
 
 
-![ec2load-balancer](https://github.com/kitty6xt5/PROJECT2/assets/141032592/b9ad2903-446b-4801-915e-f7a7a4996877)
 
-![newconf-script](https://github.com/kitty6xt5/PROJECT2/assets/141032592/1c467603-a8bd-4cfe-9d5c-2a61930d0df2)
+
 
 
 ![restartnginx](https://github.com/kitty6xt5/PROJECT2/assets/141032592/4c71db01-0378-413c-8a4f-78f28a0c6bd2)
@@ -73,4 +72,10 @@ Now we have to paste the script which is given below
 
 First, we have to change the Nginx server ip address which is named as ```servername``` in the script with our public ip address<v>
 Now we have to copy paste the public ip of two instances which we are going to use and check it for our customised load balancer<v>
-Copy paste the public ip of two instances named after ```server``` in the script
+Copy paste the public ip of two instances named after ```server``` in the script..<v>
+But before that lets create our Virtual instances..
+Create 2 instances using ubuntu AMI.
+
+
+
+![newconf-script](https://github.com/kitty6xt5/PROJECT2/assets/141032592/1c467603-a8bd-4cfe-9d5c-2a61930d0df2)
