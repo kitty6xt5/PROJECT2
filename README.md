@@ -78,7 +78,8 @@ systemctl start apache2
 
 
 ```
-![user](https://github.com/kitty6xt5/PROJECT2/assets/141032592/f84538d1-d240-4d2d-b8e8-6cd138ae6c13)
+![user2](https://github.com/kitty6xt5/PROJECT2/assets/141032592/8b6fe2b0-bda7-40ab-8ef8-e484fd54b869)
+
 
 Launch the instance.<v> 
 
@@ -107,3 +108,5 @@ sudo systemctl restart ngnix
 ```
 
 ![restartnginx](https://github.com/kitty6xt5/PROJECT2/assets/141032592/4c71db01-0378-413c-8a4f-78f28a0c6bd2)
+
+Now again copy the nginx instance public-ip and paste it on your browser, you can see whenever you refresh the page you will get the diffrent ip which means our custom load balancer is working Perfectly!!!!
