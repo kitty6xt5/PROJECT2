@@ -9,7 +9,7 @@ For data output we are using the ip of each instance in html page and different 
 
 
 ![ec2load-balancer](https://github.com/kitty6xt5/PROJECT2/assets/141032592/b9ad2903-446b-4801-915e-f7a7a4996877)
-![newconf](https://github.com/kitty6xt5/PROJECT2/assets/141032592/6c5b8563-830f-4595-b44c-b339c3b9db66)
+
 ![newconf-script](https://github.com/kitty6xt5/PROJECT2/assets/141032592/1c467603-a8bd-4cfe-9d5c-2a61930d0df2)
 
 
@@ -57,3 +57,20 @@ rm -rf /etc/nginx/sites-enabled/default
 ```
 ![defdelete](https://github.com/kitty6xt5/PROJECT2/assets/141032592/697fea3d-3a72-4233-a81a-a11fa39ce842)
 
+Now we have to create a file using ```.conf```...You can name it like anything you want. i am using here ```kitty.conf``` as my file name.
+
+```
+sudo vim /etc/nginx/conf.d/kitty.conf
+
+```
+
+![newconf](https://github.com/kitty6xt5/PROJECT2/assets/141032592/6c5b8563-830f-4595-b44c-b339c3b9db66)
+
+Now we have to paste the script which is given below
+```
+
+```
+
+First, we have to change the Nginx server ip address which is named as ```servername``` in the script with our public ip address<v>
+Now we have to copy paste the public ip of two instances which we are going to use and check it for our customised load balancer<v>
+Copy paste the public ip of two instances named after ```server``` in the script
