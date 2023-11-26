@@ -5,13 +5,6 @@ With the help of EC2 Instance we will create a Load Balancer using the Nginx Web
 we will use three instances for checking the traffic if the Load Balancer is working correctly or not.
 For data output we are using the ip of each instance in html page and different background colour of html page By which, we are able to find each instance with different colour.
 
-
-
-
-
-
-
-
 ![restartnginx](https://github.com/kitty6xt5/PROJECT2/assets/141032592/4c71db01-0378-413c-8a4f-78f28a0c6bd2)
 
 ### OVER-VIEW DIAGRAM
@@ -35,7 +28,7 @@ ssh -i "your key" ubuntu@(your publicip).compute-1.amazonaws.com
 sudo apt update
 ```
 It will download and installs the most recent packages, replacing any earlier versions that were already on your system. 
-### In cmd in terminal.
+
 ### Now we have to install some required services to move further in our process.
 Now we have to install nginx webserver to create a Load balancer.to install nginx webserver type-
 
@@ -66,25 +59,31 @@ sudo vim /etc/nginx/conf.d/kitty.conf
 ![newconf](https://github.com/kitty6xt5/PROJECT2/assets/141032592/6c5b8563-830f-4595-b44c-b339c3b9db66)
 
 Now we have to paste the script which is given below
-```
 
 ```
 
-First, we have to change the Nginx server ip address which is named as ```servername``` in the script with our public ip address<v>
-Now we have to copy paste the public ip of two instances which we are going to use and check it for our customised load balancer<v>
-Copy paste the public ip of two instances named after ```server``` in the script..<v>
-But before that lets create our Virtual instances..
+```
+
 Create 2 instances using ubuntu AMI.
 
+![2ins](https://github.com/kitty6xt5/PROJECT2/assets/141032592/cd1e05f6-b311-4085-b20a-c6f7324bac7e)
 
 Now scroll down and you will see an ```Advanced details``` option click on it and scroll down , you will see a ```userdata``` with box.<v> type these commands inside the box -
+
 ```
 #!/bin/bash
 apt update
-apt install nginx -y 
-systemctl start nginx
+apt install apache2 -y
+systemctl start apache2
 echo "<h1>heya its $(hostname)"<h1/> > /var/www/html/index.html
 
 ```
+![user](https://github.com/kitty6xt5/PROJECT2/assets/141032592/f84538d1-d240-4d2d-b8e8-6cd138ae6c13)
+
+Launch the instance.
+Now go back to the instance where 
+First, we have to change the Nginx server ip address which is named as ```servername``` in the script with our public ip address <v>
+Now we have to copy paste the public ip of two instances which we are going to use and check it for our customised load balancer <v>
+Copy paste the public ip of two instances named after ```server``` in the script.. <v>
 
 ![newconf-script](https://github.com/kitty6xt5/PROJECT2/assets/141032592/1c467603-a8bd-4cfe-9d5c-2a61930d0df2)
