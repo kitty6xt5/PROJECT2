@@ -5,7 +5,7 @@ With the help of EC2 Instance we will create a Load Balancer using the Nginx Web
 we will use three instances for checking the traffic if the Load Balancer is working correctly or not.
 For data output we are using the ip of each instance in html page and different background colour of html page By which, we are able to find each instance with different colour.
 
-![restartnginx](https://github.com/kitty6xt5/PROJECT2/assets/141032592/4c71db01-0378-413c-8a4f-78f28a0c6bd2)
+
 
 ### OVER-VIEW DIAGRAM
 
@@ -75,15 +75,35 @@ Now scroll down and you will see an ```Advanced details``` option click on it an
 apt update
 apt install apache2 -y
 systemctl start apache2
-echo "<h1>heya its $(hostname)"<h1/> > /var/www/html/index.html
+
 
 ```
 ![user](https://github.com/kitty6xt5/PROJECT2/assets/141032592/f84538d1-d240-4d2d-b8e8-6cd138ae6c13)
 
-Launch the instance.
-Now go back to the instance where 
-First, we have to change the Nginx server ip address which is named as ```servername``` in the script with our public ip address <v>
-Now we have to copy paste the public ip of two instances which we are going to use and check it for our customised load balancer <v>
+Launch the instance.<v> 
+
+SSH both instances and type- 
+
+```
+echo "<h1>heya its $(hostname)"<h1/> > /var/www/html/index.html
+
+```
+
+Now go back to the instance where you installed nginx and go to that file ```kitty.conf```.. <v>
+
+First, we have to change the Nginx server ip address which is named as ```servername``` in the script with our public ip address. <v>
+
+Now we have to copy paste the public ip of two instances which we are going to use and check it for our customised load balancer. <v>
+
 Copy paste the public ip of two instances named after ```server``` in the script.. <v>
 
-![newconf-script](https://github.com/kitty6xt5/PROJECT2/assets/141032592/1c467603-a8bd-4cfe-9d5c-2a61930d0df2)
+![111newconf-script](https://github.com/kitty6xt5/PROJECT2/assets/141032592/1bda5992-53df-4798-bd9c-58da01eb1bd5)
+
+Restart ngnix
+
+```
+sudo systemctl restart ngnix
+
+```
+
+![restartnginx](https://github.com/kitty6xt5/PROJECT2/assets/141032592/4c71db01-0378-413c-8a4f-78f28a0c6bd2)
