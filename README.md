@@ -7,7 +7,7 @@ For data output we are using the ip of each instance in html page and different 
 
 
 
-![defdelete](https://github.com/kitty6xt5/PROJECT2/assets/141032592/697fea3d-3a72-4233-a81a-a11fa39ce842)
+
 ![ec2load-balancer](https://github.com/kitty6xt5/PROJECT2/assets/141032592/b9ad2903-446b-4801-915e-f7a7a4996877)
 ![newconf](https://github.com/kitty6xt5/PROJECT2/assets/141032592/6c5b8563-830f-4595-b44c-b339c3b9db66)
 ![newconf-script](https://github.com/kitty6xt5/PROJECT2/assets/141032592/1c467603-a8bd-4cfe-9d5c-2a61930d0df2)
@@ -17,7 +17,7 @@ For data output we are using the ip of each instance in html page and different 
 
 ### OVER-VIEW DIAGRAM
 
-![custom](https://github.com/kitty6xt5/PROJECT2/assets/141032592/7b13ac71-5d7c-42d0-869c-27d2f738408b)
+![newww drawio](https://github.com/kitty6xt5/PROJECT2/assets/141032592/9881ac19-34f7-4fc3-bee4-f358892a6cd6)
 
 ### SOLUTION-------------------------------
 
@@ -46,4 +46,14 @@ sudo apt install nginx -y
 ```
 ![nginxins](https://github.com/kitty6xt5/PROJECT2/assets/141032592/7a4e434a-3a84-4a7a-b6ff-5043e6c9f6be)
 
-To check if the nginx server is working correctly copy paste the instance public ip and paste it on your browser.. if its working correctly you can see the deafault nginx page..
+To check if the nginx server is working correctly copy paste the instance public ip and paste it on your browser.. if its working correctly you can see the default nginx page..
+
+Now we have to delete or remove a file named as ```default``` to configure nginx..<v>
+which is available at ```/etc/nginx/sites-enabled/```..to remove that file type-
+
+```
+rm -rf /etc/nginx/sites-enabled/default
+
+```
+![defdelete](https://github.com/kitty6xt5/PROJECT2/assets/141032592/697fea3d-3a72-4233-a81a-a11fa39ce842)
+
