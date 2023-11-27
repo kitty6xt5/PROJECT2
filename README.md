@@ -61,6 +61,21 @@ sudo vim /etc/nginx/conf.d/kitty.conf
 Now we have to paste the script which is given below
 
 ```
+upstream backend {
+server 13.233.40.230; # type the public ip of those instance you created 
+server 13.127.42.35; # type the public ip of those instance you created 
+}
+server {
+Listen 80;
+server_name 13.127.90.230;      # here type the public ip of your nginx instance 
+ Location / {
+proxy_redirect off;
+proxy_set_header X-Real-IP $remote_addr;
+proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+proxy_set_header Host $http_host;
+proxy_pass http://backend;
+}
+}
 
 ```
 
