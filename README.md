@@ -1,4 +1,4 @@
-# PROJECT-1
+# PROJECT-2
 ## ***CREATING A CUSTOM LOAD BALANCER WITH THE HELP OF EC2 INSTANCE USING Nginx WEB SERVER***
 ### ROADMAP
 With the help of EC2 Instance we will create a Load Balancer using the Nginx Web Server.
